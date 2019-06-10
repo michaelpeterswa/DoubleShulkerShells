@@ -1,0 +1,14 @@
+name: DoubleShulkerShells
+main: st.northw.DoubleShulkerShells
+version: 1.0-STABLE
+api-version: 1.13
+author: nwradio
+commands:
+  dss:
+    description: This is the main DoubleShulkerShells command
+    usage: /dss
+    permission: DoubleShulkerShells.dss
+    permission-message: You don't have permission to use DoubleShulkerShells
+permissions:
+  DoubleShulkerShells.*:
+    description: Gives access to all commands
