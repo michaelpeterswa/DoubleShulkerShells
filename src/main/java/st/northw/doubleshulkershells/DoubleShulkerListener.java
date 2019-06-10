@@ -10,7 +10,7 @@ northw.st
 
 */
 
-package st.northw;
+package st.northw.doubleshulkershells;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;

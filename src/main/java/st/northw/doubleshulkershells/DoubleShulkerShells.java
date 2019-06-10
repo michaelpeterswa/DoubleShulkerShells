@@ -11,8 +11,9 @@ northw.st
 
 */
 
-package st.northw;
+package st.northw.doubleshulkershells;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class DoubleShulkerShells extends JavaPlugin {
@@ -24,6 +25,8 @@ public class DoubleShulkerShells extends JavaPlugin {
         getLogger().info("\u001b[35m DoubleShulkerShells v1.0\u001b[0m");
         getLogger().info("\u001b[35m ------------------------\u001b[0m");
         getLogger().info(" ");
+
+        Metrics metrics = new Metrics(this);
 
         DoubleShulkerListener instance = new DoubleShulkerListener();
         //necessary to allow bool data between listener and command hook

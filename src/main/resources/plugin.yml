@@ -1,5 +1,5 @@
 name: DoubleShulkerShells
-main: st.northw.DoubleShulkerShells
+main: st.northw.doubleshulkershells.DoubleShulkerShells
 version: 1.0-STABLE
 api-version: 1.13
 author: nwradio
