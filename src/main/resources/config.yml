@@ -1,0 +1,17 @@
+# # # # # # # # # # # # # # # # # # #
+#           ___  ________           #
+#          / _ \/ __/ __/           #
+#         / // /\ \_\ \             #
+#        /____/___/___/             #
+#                                   #
+# DoubleShulkerShell configuration  #
+# northw.st, 2019                   #
+# # # # # # # # # # # # # # # # # # #
+
+# name the shulker shells that are dropped (advertising, fun, etc.)
+# will not have a name if field is left blank
+shellName: ""
+
+# number of shells dropped on shulker death
+# set to 0 if you want to temporarily disable this plugin
+numberOfShells: 2
