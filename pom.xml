@@ -53,7 +53,7 @@
                         <relocation>
                             <pattern>org.bstats</pattern>
                             <!-- Replace this with your package! -->
-                            <shadedPattern>st.northw.</shadedPattern>
+                            <shadedPattern>st.northw.doubleshulkershells</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>

@@ -18,6 +18,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class DoubleShulkerShells extends JavaPlugin {
 
+    private static DoubleShulkerShells instance;
+
     @Override
     public void onEnable() {
         getLogger().info(" ");
@@ -25,6 +27,7 @@ public class DoubleShulkerShells extends JavaPlugin {
         getLogger().info("\u001b[35m DoubleShulkerShells v1.0\u001b[0m");
         getLogger().info("\u001b[35m ------------------------\u001b[0m");
         getLogger().info(" ");
+        instance = this;
 
         Metrics metrics = new Metrics(this);
 
@@ -44,6 +47,10 @@ public class DoubleShulkerShells extends JavaPlugin {
     @Override
     public void onDisable() {
         getLogger().info("DoubleShulkerShells has been disabled");
+    }
+
+    public static DoubleShulkerShells getInst() {
+        return instance;
     }
 
 }

@@ -19,18 +19,36 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class DoubleShulkerListener implements Listener {
 
-    private ItemStack items = new ItemStack(Material.SHULKER_SHELL, 2);
+    private int numberOfShells;
+    private String shellName;
+    private ItemStack items;
 
     @EventHandler
     public void onShulkerDeath(EntityDeathEvent event) {
-        if(event.getEntity().getKiller() instanceof Player){
-            if(event.getEntity().getType() == EntityType.SHULKER){
-                event.getDrops().clear();
-                event.getDrops().add(items);
-                //event.getEntity().getKiller().sendMessage("execute");
+
+        ConfigHandler ch = new ConfigHandler();
+        ch.saveDefaults();
+
+        numberOfShells = ch.returnShellNumber(ch.readFromConfig());
+        shellName = ch.returnShellName(ch.readFromConfig());
+
+        if(numberOfShells > 0) {
+            items = new ItemStack(Material.SHULKER_SHELL, numberOfShells);
+            if (event.getEntity().getKiller() instanceof Player) {
+                if (event.getEntity().getType() == EntityType.SHULKER) {
+                    if (shellName.length() > 0) {
+                        ItemMeta meta = items.getItemMeta();
+                        meta.setDisplayName(shellName);
+                        items.setItemMeta(meta);
+                    }
+                    event.getDrops().clear();
+                    event.getDrops().add(items);
+                    //event.getEntity().getKiller().sendMessage("execute");
+                }
             }
         }
     }
