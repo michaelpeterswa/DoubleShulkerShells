@@ -31,7 +31,6 @@ public class DoubleShulkerListener implements Listener {
     public void onShulkerDeath(EntityDeathEvent event) {
 
         ConfigHandler ch = new ConfigHandler();
-        ch.saveDefaults();
 
         numberOfShells = ch.returnShellNumber(ch.readFromConfig());
         shellName = ch.returnShellName(ch.readFromConfig());

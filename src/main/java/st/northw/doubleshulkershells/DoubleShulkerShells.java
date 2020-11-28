@@ -42,6 +42,9 @@ public class DoubleShulkerShells extends JavaPlugin {
         catch (Exception e) {
             getLogger().info("command hooks did not initialize properly");
         }
+
+        ConfigHandler ch = new ConfigHandler();
+        ch.saveDefaults();
     }
 
     @Override
