@@ -23,7 +23,7 @@ public class MainCommand implements CommandExecutor {
         String dss_prefix = String.format("%s[%sdss%s] ", ChatColor.DARK_PURPLE, ChatColor.LIGHT_PURPLE, ChatColor.DARK_PURPLE);
 
         sender.sendMessage(dss_prefix + ChatColor.WHITE + "---------------------------");
-        sender.sendMessage(dss_prefix + ChatColor.WHITE + "Double Shulker Shells v1.0");
+        sender.sendMessage(dss_prefix + ChatColor.WHITE + "Double Shulker Shells v1.1");
         sender.sendMessage(dss_prefix + ChatColor.RED + "/dss : the only command");
         sender.sendMessage(dss_prefix + ChatColor.WHITE + "---------------------------");
 
