@@ -5,16 +5,16 @@
 /____/\___/\_,_/_.__/_/\__/___/_//_/\_,_/_/_/\_\\__/_/ /___/_//_/\__/_/_/___/
 
 Michael Peters
-northw.st
+halcyonresearch.dev
 © 2019, All rights reserved.
 
 */
 
-package st.northw.doubleshulkershells;
+package dev.halcyonresearch.doubleshulkershells;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
+//import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -23,26 +23,24 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class DoubleShulkerListener implements Listener {
 
-    private int numberOfShells;
-    private String shellName;
-    private ItemStack items;
-
     @EventHandler
     public void onShulkerDeath(EntityDeathEvent event) {
 
         ConfigHandler ch = new ConfigHandler();
         ch.saveDefaults();
 
-        numberOfShells = ch.returnShellNumber(ch.readFromConfig());
-        shellName = ch.returnShellName(ch.readFromConfig());
+        int numberOfShells = ch.returnShellNumber(ch.readFromConfig());
+        String shellName = ch.returnShellName(ch.readFromConfig());
 
         if(numberOfShells > 0) {
-            items = new ItemStack(Material.SHULKER_SHELL, numberOfShells);
-            if (event.getEntity().getKiller() instanceof Player) {
+            ItemStack items = new ItemStack(Material.SHULKER_SHELL, numberOfShells);
+            if (event.getEntity().getKiller() != null) {
                 if (event.getEntity().getType() == EntityType.SHULKER) {
                     if (shellName.length() > 0) {
                         ItemMeta meta = items.getItemMeta();
-                        meta.setDisplayName(shellName);
+                        if (meta != null) {
+                            meta.setDisplayName(shellName);
+                        }
                         items.setItemMeta(meta);
                     }
                     event.getDrops().clear();

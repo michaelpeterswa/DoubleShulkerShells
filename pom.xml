@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>st.northw</groupId>
+    <groupId>dev.halcyonresearch</groupId>
     <artifactId>DoubleShulkerShells</artifactId>
-    <version>1.0-STABLE</version>
+    <version>1.1-STABLE</version>
 
     <repositories>
         <repository>
@@ -21,22 +21,23 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>LATEST</version><!--change this value depending on the version or use LATEST-->
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <!--change this value depending on the version or use LATEST-->
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
-            <version>1.5</version>
+            <version>2.2.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>RELEASE</version>
+            <version>5.8.0-M1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -53,7 +54,7 @@
                         <relocation>
                             <pattern>org.bstats</pattern>
                             <!-- Replace this with your package! -->
-                            <shadedPattern>st.northw.doubleshulkershells</shadedPattern>
+                            <shadedPattern>dev.halcyonresearch.doubleshulkershells</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>

@@ -1,7 +1,7 @@
 name: DoubleShulkerShells
-main: st.northw.doubleshulkershells.DoubleShulkerShells
-version: 1.0-STABLE
-api-version: 1.13
+main: dev.halcyonresearch.doubleshulkershells.DoubleShulkerShells
+version: 1.1-STABLE
+api-version: 1.16
 author: nwradio
 commands:
   dss:

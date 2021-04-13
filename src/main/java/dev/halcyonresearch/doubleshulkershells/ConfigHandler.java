@@ -5,12 +5,12 @@
 /____/\___/\_,_/_.__/_/\__/___/_//_/\_,_/_/_/\_\\__/_/ /___/_//_/\__/_/_/___/
 
 Michael Peters
-northw.st
+halcyonresearch.dev
 © 2019, All rights reserved.
 
 */
 
-package st.northw.doubleshulkershells;
+package dev.halcyonresearch.doubleshulkershells;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
