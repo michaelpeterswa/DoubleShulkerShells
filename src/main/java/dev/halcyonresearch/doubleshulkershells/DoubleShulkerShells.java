@@ -41,7 +41,7 @@ public class DoubleShulkerShells extends JavaPlugin {
         getServer().getPluginManager().registerEvents(instance, this);
 
         try {
-            getCommand("dss").setExe cutor(new MainCommand()); //main command hook
+            getCommand("dss").setExecutor(new MainCommand()); //main command hook
         }
         catch (Exception e) {
             getLogger().info("command hooks did not initialize properly");
