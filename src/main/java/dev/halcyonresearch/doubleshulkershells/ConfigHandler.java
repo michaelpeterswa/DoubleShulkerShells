@@ -6,7 +6,7 @@
 
 Michael Peters
 halcyonresearch.dev
-© 2019, All rights reserved.
+© 2021, All rights reserved.
 
 */
 
@@ -17,15 +17,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class ConfigHandler {
 
-    JavaPlugin plugin = DoubleShulkerShells.getInst();
-
     // Your plugin instance
+    JavaPlugin plugin = DoubleShulkerShells.getInst();
 
     void saveDefaults() {
         plugin.saveDefaultConfig();
     }
     public FileConfiguration readFromConfig () {
-        return plugin.getConfig(); //Accessing the config file
+        //Accessing the config file
+        return plugin.getConfig();
     }
 
     public String returnShellName(FileConfiguration a) {

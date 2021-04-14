@@ -5,10 +5,8 @@
 /____/\___/\_,_/_.__/_/\__/___/_//_/\_,_/_/_/\_\\__/_/ /___/_//_/\__/_/_/___/
 
 Michael Peters
-northw.st
-© 2019, All rights reserved.
-//testing jenkins 2
-
+halcyonresearch.dev
+© 2021, All rights reserved.
 */
 
 package dev.halcyonresearch.doubleshulkershells;
@@ -29,8 +27,13 @@ public class DoubleShulkerShells extends JavaPlugin {
         getLogger().info(" ");
         instance = this;
 
+        // bStats support
         int id = 4874;
         Metrics metrics = new Metrics(this, id);
+
+        // save default configuration on startup
+        ConfigHandler ch = new ConfigHandler();
+        ch.saveDefaults();
 
         DoubleShulkerListener instance = new DoubleShulkerListener();
         //necessary to allow bool data between listener and command hook
@@ -38,7 +41,7 @@ public class DoubleShulkerShells extends JavaPlugin {
         getServer().getPluginManager().registerEvents(instance, this);
 
         try {
-            getCommand("dss").setExecutor(new MainCommand()); //main command hook
+            getCommand("dss").setExe cutor(new MainCommand()); //main command hook
         }
         catch (Exception e) {
             getLogger().info("command hooks did not initialize properly");

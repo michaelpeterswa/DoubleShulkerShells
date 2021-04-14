@@ -6,7 +6,7 @@
 
 Michael Peters
 halcyonresearch.dev
-© 2019, All rights reserved.
+© 2021, All rights reserved.
 
 */
 

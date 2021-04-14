@@ -14,7 +14,6 @@ package dev.halcyonresearch.doubleshulkershells;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
-//import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -27,7 +26,6 @@ public class DoubleShulkerListener implements Listener {
     public void onShulkerDeath(EntityDeathEvent event) {
 
         ConfigHandler ch = new ConfigHandler();
-        ch.saveDefaults();
 
         int numberOfShells = ch.returnShellNumber(ch.readFromConfig());
         String shellName = ch.returnShellName(ch.readFromConfig());
@@ -45,7 +43,6 @@ public class DoubleShulkerListener implements Listener {
                     }
                     event.getDrops().clear();
                     event.getDrops().add(items);
-                    //event.getEntity().getKiller().sendMessage("execute");
                 }
             }
         }
